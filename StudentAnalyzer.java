@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class StudentAnalyzer{
   private ArrayList<Student> studentList;
 
@@ -32,5 +34,15 @@ public class StudentAnalyzer{
       }
     }
     return max;
+  }
+
+  public ArrayList<Student> getTopStudents(int threshold){
+    ArrayList<Student> topStudents = new ArrayList<>();
+    for(int i = 0; i < studentList.size(); i++){
+      if(studentList.get(i).getMarks() >= threshold){
+        topStudents.add(studentList.get(i));
+      }
+    }
+    return topStudents;
   }
 }
