@@ -45,4 +45,15 @@ public class StudentAnalyzer{
     }
     return topStudents;
   }
+
+  public boolean hasDuplicateNames(){
+    for(int i = 0; i < studentList.size(); i++){
+      for(int x = i + 1; x < studentList.size(); x++){
+        if(studentList.get(i).getName().equals(studentList.get(x).getName())){
+          return true;
+        }
+      }
+    }
+    return false;
+  }
 }
