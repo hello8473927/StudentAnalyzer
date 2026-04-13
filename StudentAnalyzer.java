@@ -23,4 +23,14 @@ public class StudentAnalyzer{
       }
     }
   }
+
+  public Student findTopStudent(){
+    Student max = studentList.get(0);
+    for(int i = 0; i < studentList.size(); i++){
+      if(studentList.get(i).getMarks() > max.getMarks()){
+        max = studentList.get(i);
+      }
+    }
+    return max;
+  }
 }
