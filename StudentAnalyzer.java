@@ -65,4 +65,14 @@ public class StudentAnalyzer{
     }
     return true;
   }
+
+  public int countImprovingPairs(){
+    int num = 0;
+    for(int i = 0; i < studentList.size() - 1; i++){
+      if (studentList.get(i).getMarks() < studentList.get(i + 1).getMarks()){
+        num++;
+      }
+    }
+    return num;
+  }
 }
